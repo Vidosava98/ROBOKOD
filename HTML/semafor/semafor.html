@@ -1,0 +1,76 @@
+<html>
+<head> 
+    <title>Semafor</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #333;
+        }
+
+        .semafor {
+            width: 100px;
+            background-color: black;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .light {
+            width: 60px;
+            height: 60px;
+            background-color: gray;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        /* Nove boje */
+        .red { background-color: red; }
+        .yellow { background-color: yellow; }
+        .green { background-color: green; }
+
+        .active {
+            opacity: 1;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="semafor">
+        <div class="light red"></div>
+        <div class="light yellow"></div>
+        <div class="light green"></div>
+    </div>
+    <button id="changeLight">Promeni svetlo</button>
+
+    <script>
+        const lights = document.querySelectorAll(".light");
+        const button = document.getElementById("changeLight");
+        let activeIndex = 0;
+
+        function changeLight() {
+            lights.forEach(light => light.classList.remove("active")); 
+            lights[activeIndex].classList.add("active"); 
+            activeIndex = (activeIndex + 1) % lights.length; 
+        }
+		button.addEventListener("click", changeLight);
+        
+		changeLight();
+        
+    </script>
+
+</body>
+</html>
