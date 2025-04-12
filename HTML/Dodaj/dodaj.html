@@ -1,0 +1,57 @@
+<html>
+	<head>
+	<link
+      rel="icon"
+      href="smile.png"
+      type="image/x-icon"
+    />
+	<style>
+	#main{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 10%;
+	gap: 1%;
+	}
+	.broj{
+	background-color: #FFC0CB;
+	color: white;
+	padding: 2px;
+	border-radius: 5px;
+	min-width:50px;
+	min-height: 50px;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 1rem;
+	margin-top: 1rem;
+	}
+	button{
+	border: none;
+    padding: 1rem;
+    background-color: green;
+    color: white;
+    margin-left: 40%;
+	}
+	</style>
+	</head>
+	<body>
+		<div  id = "main">
+			<div class = "broj"> 1</div>
+			<div class = "broj"> 2</div>
+		</div>
+		<button onclick = "dodaj()">Dodaj Broj</button>
+		
+		<script>
+		function dodaj(){
+		  const main = document.querySelector("#main"); 
+		  const len = main.children.length; 
+
+		  const noviBroj = document.createElement("div");
+		  noviBroj.className = "broj";
+		  noviBroj.textContent = len + 1;
+
+		  main.appendChild(noviBroj);
+		  }
+		</script>
+	</body>
+</html> 
