@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>select</title>
+	<style>
+	body{
+	padding:2%;
+	}
+	form{
+	display:flex;
+	flex-direction:column;
+	gap:16px;
+	width:200px;
+	}
+	#idText{
+	margin-top:20px;
+	font-weight:bold;
+	background-color:#5f3242;
+	font-family: "Times New Roman", sans-serif;
+	padding:8px;
+	width:200px;
+	color:#ffffff;
+	}
+	</style>
+</head>
+<body>
+
+<h2>The select Element</h2>
+
+<p>Selekt element definise drop-down list-u:</p>
+
+	<form onsubmit="myFunction(event)">
+	  <label for="cars">Izaberi auto:</label>
+	  <select id="cars" name="cars">
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="fiat">Fiat</option>
+		<option value="audi">Audi</option>
+	  </select>
+	  
+	  <label for="sport">Izaberi sport:</label>
+	  <select id="sport" name="sport">
+		<option value="kosarka">Kosarka</option>
+		<option value="odbojka">Odbojka</option>
+		<option value="rukomet">Rukomet</option>
+		<option value="tenis">Tenis</option>
+	  </select>
+	  
+	  <label for="boju">Izaberi boju:</label>
+	  <select id="boja" name="boja">
+		<option value="zuta">Zuta</option>
+		<option value="zelena">Zelena</option>
+		<option value="plava">roze</option>
+		<option value="siva">Siva</option>
+	  </select>
+	  
+	  <input type="submit">
+	</form>
+	<div id="idText">
+	
+	</div>
+	<script>
+	function myFunction(event){
+	event.preventDefault();
+
+	const auto = document.querySelector("#cars").value;
+	const sport = document.querySelector("#sport").value;
+	const boja = document.querySelector("#boja").value;
+
+	console.log("Auto:", auto);
+	console.log("Sport:", sport);
+	console.log("Boja:", boja);
+	document.querySelector("#idText").innerText = "Auto: " + auto + ", Sport: " + sport + ", Boja: " + boja;
+	}
+	</script>
+</body>
+</html>

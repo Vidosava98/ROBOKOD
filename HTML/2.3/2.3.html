@@ -1,0 +1,133 @@
+<html>
+    <title>Kviz</title>
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color:#565656;
+            font-family:Arial, sans-serif;
+        }
+
+        #container{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:400px;
+            text-align:center;
+            box-shadow:0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .question{
+            font-size:18px;
+            margin-bottom:20px;
+        }
+
+        .answers button{
+            display:block;
+            width:100%;
+            margin:5px 0;
+            padding:10px;
+            cursor:pointer;
+        }
+
+        #nextBtn{
+            margin-top:15px;
+            padding:10px;
+            width:100%;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div id="question" class="question"></div>
+    <div id="answers" class="answers"></div>
+    <button id="nextBtn">Next</button>
+</div>
+
+<script>
+
+const questions = [
+    {
+        question: "Who is making the Web standards?",
+        answers: ["Mozilla", "Google", "Microsoft", "The World Wide Web Consortium"],
+        correct: 3
+    },
+    {
+        question: "Choose the correct HTML element for the largest heading:",
+        answers: ["h1", "h6", "heading"],
+        correct: 0
+    },
+    {
+        question: "Inside which HTML element do we put JavaScript?",
+        answers: ["<js>", "<script>", "<javascript>"],
+        correct: 1
+    }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionEl = document.getElementById("question");
+const answersEl = document.getElementById("answers");
+const nextBtn = document.getElementById("nextBtn");
+
+function loadQuestion(){
+    nextBtn.style.display = "none";
+    answersEl.innerHTML = "";
+
+    let q = questions[currentQuestion];
+    questionEl.textContent = q.question;
+
+    q.answers.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.textContent = answer;
+        button.onclick = () => selectAnswer(index);
+        answersEl.appendChild(button);
+    });
+}
+
+function selectAnswer(index){
+    if(index === questions[currentQuestion].correct){
+        score++;
+    }
+
+    Array.from(answersEl.children).forEach(btn => {
+        btn.disabled = true;
+    });
+
+    nextBtn.style.display = "block";
+}
+
+nextBtn.addEventListener("click", () => {
+    currentQuestion++;
+
+    if(currentQuestion < questions.length){
+        loadQuestion();
+    } else {
+        showResult();
+    }
+});
+
+function showResult(){
+    questionEl.textContent = `Rezultat: ${score} / ${questions.length}`;
+    answersEl.innerHTML = "";
+    nextBtn.style.display = "none";
+
+    if(score === 3){
+        const bravo = document.createElement("h3");
+        bravo.textContent = "Bravo!";
+        answersEl.appendChild(bravo);
+    }
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klikni div da se uokviri</title>
+  <style>
+    .kutija {
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+      background-color: lightgray;
+      display: inline-block;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+      transition: border 0.3s;
+      user-select: none;
+    }
+
+    .kutija.aktivna {
+      border: 3px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div class="kutija">Klikni mene</div>
+  <div class="kutija">I mene</div>
+  <div class="kutija">Možda i mene</div>
+
+  <script>
+    const kutije = document.querySelectorAll('.kutija');
+
+    kutije.forEach(kutija => {
+      kutija.addEventListener('click', () => {
+        // Ako već ima klasu 'aktivna', ukloni je
+        if (kutija.classList.contains('aktivna')) {
+          kutija.classList.remove('aktivna');
+        } else {
+          // Ukloni 'aktivna' sa svih drugih
+          kutije.forEach(k => k.classList.remove('aktivna'));
+          // Dodaj okvir ovoj kliknutoj
+          kutija.classList.add('aktivna');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta>
+<title>InstaLook</title>
+<style>
+	body 
+	{ 
+		font-family: Arial; 
+		text-align: center; 
+	}
+
+	.card 
+	{
+		margin: 20px; 
+	}
+	 
+	img 
+	{ 
+		width: 200px; 
+		display: block; 
+		margin: auto; 
+	}
+
+	button 
+	{ 
+		padding: 8px 12px; 
+		margin: 5px; 
+		cursor: pointer; 
+	}
+
+	.like.active 
+	{ 
+		background: green;
+		color: white; 
+	}
+
+	.dislike.active 
+	{ 
+		background: red; 
+		color: white; 
+	}
+</style>
+</head>
+<body>
+
+<h2>Photo lover</h2>
+
+<div class="card">
+  <img src="https://picsum.photos/200?1">
+  <button class="like" onclick="like(this)">&#128077; Like</button>
+  <button class="dislike" onclick="dislike(this)">&#128078; Dislike</button>
+</div>
+
+<div class="card">
+  <img src="https://picsum.photos/200?2">
+  <button class="like" onclick="like(this)">&#128077; Like</button>
+  <button class="dislike" onclick="dislike(this)">&#128078; Dislike</button>
+</div>
+
+<div class="card">
+  <img src="https://picsum.photos/200?3">
+  <button class="like" onclick="like(this)">&#128077; Like</button>
+  <button class="dislike" onclick="dislike(this)">&#128078; Dislike</button>
+</div>
+
+<script>
+function like(btn) {
+  let d = btn.nextElementSibling;
+  btn.classList.toggle("active");
+  d.classList.remove("active");
+}
+function dislike(btn) {
+  let l = btn.previousElementSibling;
+  btn.classList.toggle("active");
+  l.classList.remove("active");
+}
+</script>
+
+</body>
+</html>

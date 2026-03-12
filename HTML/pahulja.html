@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>Igra Klikni Pahuljicu</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  h1 {
+    margin-top: 20px;
+    color: #333;
+  }
+
+  #gameArea {
+    position: relative;
+    width: 90vw;
+    height: 70vh;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .snowflake {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .snowflake:hover {
+    transform: scale(1.2);
+  }
+
+  #stats {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+<h1>Klikni pahuljicu!</h1>
+
+<div id="gameArea"></div>
+
+<div id="stats">
+  Klikovi: <span id="clicks">0</span> | Vreme: <span id="timer">30</span> sekundi
+</div>
+
+<button id="startBtn">Počni igru</button>
+
+<script>
+const gameArea = document.getElementById('gameArea');
+const clicksDisplay = document.getElementById('clicks');
+const timerDisplay = document.getElementById('timer');
+const startBtn = document.getElementById('startBtn');
+
+let clicks = 0;
+let time = 30; 
+let gameInterval;
+let timerInterval;
+
+function getRandomPosition() {
+  const x = Math.random() * (gameArea.clientWidth - 50);
+  const y = Math.random() * (gameArea.clientHeight - 50);
+  return { x, y };
+}
+
+function createSnowflake() {
+  const snowflake = document.createElement('img');
+  snowflake.src = 'pahulja.png';
+  snowflake.classList.add('snowflake');
+
+  const pos = getRandomPosition();
+  snowflake.style.left = pos.x + 'px';
+  snowflake.style.top = pos.y + 'px';
+
+  snowflake.addEventListener('click', () => {
+    clicks++;
+    clicksDisplay.textContent = clicks;
+    gameArea.removeChild(snowflake);
+    createSnowflake();
+  });
+
+  gameArea.appendChild(snowflake);
+}
+
+function startGame() {
+  clicks = 0;
+  time = 30;
+  clicksDisplay.textContent = clicks;
+  timerDisplay.textContent = time;
+
+  gameArea.innerHTML = '';
+
+ 
+  createSnowflake();
+
+
+  timerInterval = setInterval(() => {
+    time--;
+    timerDisplay.textContent = time;
+    if (time <= 0) {
+      clearInterval(timerInterval);
+      alert('Vreme je isteklo! Kliknuli ste ' + clicks + ' puta.');
+      gameArea.innerHTML = '';
+    }
+  }, 1000);
+}
+
+startBtn.addEventListener('click', startGame);
+</script>
+
+</body>
+</html>
