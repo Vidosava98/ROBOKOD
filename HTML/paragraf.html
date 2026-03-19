@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>
+		Paragraf
+		</title>
+		<style>
+		body{
+		padding: 2% 1% 1% 2%;
+		font-weight:bold;
+		}
+		#divWrapovan{
+		display:flex;
+		flex-direction: row;
+		flex-wrap:wrap;
+		gap:64px;
+		}
+		.pUDivu{
+		width:400px;
+		opacity:0.5;
+		padding:1%;
+		}
+		.pVanDiva{
+		background-color: #fcf0cf;
+		opacity: 0.5;
+		}
+		#idItalic{
+		font-style:italic;
+		}
+		#idFamily{
+		font-family: Iosevka Charon Mono;
+		color: pink;		
+		}
+		.kartica{
+		background-image: url('dizni.jpg');
+		align-items:center;
+		background-repeat: no-repeat;
+		background-size: cover;			
+		width:450px;
+		}
+		</style>
+	</head>
+	<body>
+		<h2>Paragraf</h2>
+		
+		<p class = "pVanDiva">
+			After the murder of his father, a young lion prince flees his kingdom only 
+			to learn the true meaning of responsibility and bravery.
+		</p>
+		<p class="pVanDiva">
+			An evil high-fashion designer plots to steal dalmatian puppies in order to 
+			make an extravagant fur coat but creates an extravagant mess instead.
+		</p>
+		
+		<div id = "divWrapovan">
+			<div class = "kartica">
+				<p class="pUDivu" id = "idItalic">
+				After the murder of his father, a young lion prince flees his kingdom only 
+				to learn the true meaning of responsibility and bravery.
+				</p>
+			</div>
+			<div class = "kartica">	
+				<p class="pUDivu" id = "idFamily">
+				An evil high-fashion designer plots to steal dalmatian puppies in order to 
+				make an extravagant fur coat but creates an extravagant mess instead.
+				</p>
+			</div>	
+			<div class = "kartica">
+				<p class="pUDivu">
+				After the murder of his father, a young lion prince flees his kingdom only 
+				to learn the true meaning of responsibility and bravery.
+				</p>
+			</div>
+			<div class = "kartica">
+				<p class="pUDivu">
+				An evil high-fashion designer plots to steal dalmatian puppies in order to 
+				make an extravagant fur coat but creates an extravagant mess instead.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
