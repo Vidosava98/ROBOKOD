@@ -1,0 +1,137 @@
+<html lang="sr">
+<head>
+    <title>Kreiraj svog robota</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #b7f7db;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 30px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        input, select {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 25px;
+            background: #00c853;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #009624;
+        }
+
+        .robot-area {
+            margin-top: 60px;
+        }
+
+        .robot {
+            width: 180px;
+            height: 180px;
+            background: gray;
+            margin: auto;
+            border-radius: 25px;
+            position: relative;
+            display: none;
+        }
+
+        .eye {
+            width: 25px;
+            height: 25px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+        }
+
+        .left {
+            left: 40px;
+        }
+
+        .right {
+            right: 40px;
+        }
+
+        .mouth {
+            width: 70px;
+            height: 12px;
+            background: black;
+            position: absolute;
+            bottom: 40px;
+            left: 55px;
+        }
+
+        #poruka {
+            margin-top: 25px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kreiraj svog robota</h1>
+    <div class="controls">
+        <input type="text" id="ime" placeholder="Ime robota">
+
+        <select id="boja">
+            <option value="#f7b7e7">Pink</option>
+            <option value="#b7d9f7">Plava</option>
+            <option value="green">Zelena</option>
+            <option value="orange">Narandžasta</option>
+        </select>
+        <select id="energija">
+            <option value="100">100%</option>
+            <option value="50">50%</option>
+            <option value="10">10%</option>
+        </select>
+        <button onclick="napraviRobota()">
+            Napravi robota
+        </button>
+
+    </div>
+    <div class="robot-area">
+        <div class="robot" id="robot">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="mouth"></div>
+        </div>
+        <div id="poruka"></div>
+    </div>
+
+<script>
+    function napraviRobota() {
+        let ime = document.getElementById("ime").value;
+        let boja = document.getElementById("boja").value;
+        let energija = document.getElementById("energija").value;
+        if (ime == "") {
+            document.getElementById("poruka").innerText =
+            "Unesi ime robota!";
+            return;
+        }
+        let robot = document.getElementById("robot");
+        robot.style.display = "block";
+        robot.style.backgroundColor = boja;
+        document.getElementById("poruka").innerText =
+         ime + " je aktiviran! Energija: " + energija + "%";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+"Slatke muke robota Gricka"
+Priča: Dobili ste novog kućnog ljubimca – malog robota koji se zove Gricko. Gricko obožava jesti baterije. Svaki dan Gricko pojede tačno 3 baterije. Vi ste u prodavnici kupili jedno veliko pakovanje baterija, ali ne znate koliko će dana te baterije trajati Gricku i hoće li vam ostati višak baterija.
+
+Tvoj zadatak: Napiši program u Pythonu koji će pomoći da se izračunaju Grickove zalihe. Program treba:
+
+Pitati korisnika koliko je ukupno baterija kupio u prodavnici.
+
+Izračunati za koliko će celih dana Gricko imati dovoljno baterija (deljenje bez ostatka).
+
+Izračunati koliko će baterija ostati kao višak (ostatak pri deljenju).
+
+Ispisati obe informacije na ekranu.

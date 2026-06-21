@@ -1,0 +1,9 @@
+Tekstualni zadatak: "Svemirska rođendanska zabava"
+Priča:
+Vanzemaljac Koko organizuje rođendansku zabavu na svojoj planeti. Pozvao je svoje prijatelje, ali problem je što na njegovoj planeti kolači jako puno koštaju! Jedan rođendanski kolač košta 7 svemirskih novčića i svaki gost dobija po jedan kolač. Koko takođe mora platiti 15 svemirskih novčića za najam svemirske dvorane (bez obzira na to koliko gostiju došlo).
+Tvoj zadatak:
+Napiši program u Pythonu koji će pomoći Koku da izračuna koliko će ukupno koštati zabava.
+Program treba:
+Pitati Koka koliko prijatelja (gostiju) dolazi na zabavu.
+Izračunati ukupnu cenu.
+Ispisati poruku s ukupnim troškom zabave.

@@ -1,0 +1,71 @@
+1. HTML dolazi od reci:
+a) HyperText Markup Language
+b) Hyperlink Markup Language
+c) Hyper Typical Medior Language
+d) Hyper Textual Medium Label
+
+2. Koji HTML tag koristimo za linkove ka drugim stranicama na internetu:
+a) <link></link>
+b) <src></src>
+c) <a></a>
+d) <tag></tag>
+
+3. Da li je sledeca tvrdnja istinita?
+Na jednoj web stranici , jedan id treba biti jedinstven i dodeljen samo jednom HTML elementu. Ne sme postojati vise elemenata sa istim  id-em.
+a) Tacno
+b) Netacno
+
+4. Na osnovu slike, da li ce kontakt podaci biti:
+
+a) Jedan pored drugog, sa razmakom 24px
+b) Jedan ispod drugog, sa razmakom 24px
+c) Jedan pored drugog, sa proizvoljnim razmakom
+d) Jedan ispod drugog, sa proizvoljnim razmakom
+
+5. Koji od ponudjenih html elemenata centrira svoj sadrzaj, odnosno sve HTML elemente koji se nalaze unutar njega,
+
+a) <center></center>
+b) <br>
+c) <input>
+d) <button></button>
+
+
+
+6. Primer sa slike prikazuje input html element, on ima odgovarajuci type="", koji type je u pitanju:
+
+a) text
+b) radio
+c) checkbox
+d) date
+
+
+7. Kreiran je <div> element kome je dodeljen margin:20px; Koji je od ovih ponudjenih tvrdnji tacna za takav element:
+
+a) div ima marginu 20px sa leve i desne strane 
+b) div ima marginu 20px sa gornje i donje strane
+c) div ima marginu sa gornje, desne, donje i leve strane
+d) CSS stil za marginu, za dati div nije pravilno podesen
+
+
+8. Da li smo pravilno isprogramirali, ukoliko zelimo da nam se slika pozadine ne ponavlja, bude centrirana:
+
+   	    background-image:url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4");
+            background-repeat:no-repeat;
+            background-position:center;
+ 
+a) Pozadina je dobro podesena
+b) Ima gresaka, slika bi se ponavljala
+
+
+9. Da li je html element koji koristimo za kreiranje tabele samozatvarajuci ili  postoji tag za zatvaranje. 
+Izaberi pravilno napisan primer.
+
+a) <table/>
+b) <table></table>
+
+
+10. Zelim da prikazem sliku na svojoj web stranici koja se nalazi u istom folderu u kome je i fajl koji pokrecem, da li bi trbelo koristiti apsolutnu ili relativnu putanju? Izaberi tacan primer:
+
+a) 	<img src="girl.jpg" alt="Profilna slika">
+b) 	<img src="C:\\dsc\slike\girl.jpg" alt="Profilna slika">
+

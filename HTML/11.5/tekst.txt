@@ -1,0 +1,35 @@
+Zadatak — “Upis novog đaka u RoboKod”
+Kreiraj HTML fajl i dodaj <style> tag koji će sadržati CSS kod unutar HTML dokumenta.
+
+Podesi ikonu stranice.
+Podesi naziv taba na:
+
+RoboKod Upis
+Dodaj pozadinsku sliku vezanu za programiranje, robote ili računare.
+Pozadina treba:
+da bude preko cele stranice
+da se ne ponavlja
+da bude lepo centrirana
+Dodaj naslov:
+
+Upis novog đaka
+Dodaj sliku robota ili računara:
+širina i visina slike: 150px
+koristi border-radius
+obrati pažnju na razmak između elemenata
+Dodaj kontejner:
+crna pozadina
+width: 320px
+height: 320px
+zaobljeni uglovi
+U kontejner dodaj:
+labelu i input za ime đaka
+labelu i input za prezime
+labelu i input za uzrast
+labelu i input za omiljeni programski jezik
+Dodaj dugme:
+dimenzije 90px × 50px
+tekst na dugmetu:
+
+Upiši
+Na kraju dodaj prazan <script> tag u koji bi se kasnije pisao JavaScript kod.

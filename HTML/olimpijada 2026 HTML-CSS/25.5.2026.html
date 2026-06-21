@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>SunTravel</title>
+
+    <link rel="icon" type="image/png" href="avion.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+        }
+
+        h1, h4 {
+            color: white;
+            margin-top: 20px;
+        }
+
+        .slike {
+            margin-top: 20px;
+        }
+
+        .slike img {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        .naocare {
+            border-radius: 20px;
+        }
+
+        .kontejner {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 300px;
+            height: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+			display: flex;
+			gap:8px;
+			flex-direction:column;
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 90px;
+            height: 50px;
+            margin-top: 10px;
+            cursor: pointer;
+			border:none;
+			background-color: #018a83;
+			border-radius: 30px;
+			color:white;
+        }
+		
+		label{
+		color: #018a83;
+		}
+		
+		#poruka{
+		color: white;
+		font-size: 20px;
+		padding-top: 10px;
+		}
+    </style>
+</head>
+
+<body>
+
+    <h1>PUTUJ SA NAMA!</h1>
+	<h4> Rezerviši svoje putovanje</h4>
+
+    <div class="slike">
+        <img src="suncobran.jpg" alt="suncobran">
+        <img class="naocare" src="naocare.avif" alt="naocare">
+        <img src="palma.jpg" alt="palma">
+    </div>
+
+    <div class="kontejner">
+
+		<div>
+			<label>Ime i prezime</label><br>
+			<input type="text"><br>
+        </div>
+		
+		<div>
+			<label>Destinacija</label><br>
+			<input type="text"><br>
+		</div>
+		
+		<div>
+			<label>Broj dana putovanja</label><br>
+			<input type="number"><br>
+		</div>
+		
+		<div>
+			<label>Broj osoba</label><br>
+			<input type="number"><br>
+		</div>
+
+    </div>
+	
+	<button onclick="rezervisi()">Rezerviši</button>
+
+	<div id="poruka">
+	
+	</div>
+    <script>
+	function rezervisi(){
+	document.getElementById("poruka").innerText = "Uspešno ste rezervisali putovanje!";
+	}
+    </script>
+
+</body>
+</html>

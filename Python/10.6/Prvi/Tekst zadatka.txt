@@ -1,0 +1,12 @@
+"Tajni nacrt za izvanzemaljsku bazu"
+
+Priča: Postao si glavni dizajner za izvanzemaljsku bazu na Marsu. Tvoj prvi zadatak je nacrtati plavi kvadrat koji predstavlja glavni šator,
+a zatim unutar njega crveni trougao koji predstavlja radar. Kornjača je tvoj robot-crtač koji mora izvršiti ove naredbe.
+
+Tvoj zadatak: Napiši program u Pythonu koristeći modul turtle koji će nacrtati bazu. Program treba:
+
+Promeniti boju olovke u plavu i nacrtati kvadrat (stranica dužine 100 koraka).
+
+Podići olovku, pomaknuti se malo unutar kvadrata i spustiti olovku.
+
+Promeniti boju u crvenu i nacrtati jednakostranični trougao (stranica dužine 50 koraka).

@@ -1,0 +1,141 @@
+<html lang="sr">
+	<head>
+	<title>Sun Travel</title>
+		<style>
+			body{
+			margin:0;
+			font-family:Arial;
+			background:#f2fbff;
+			}
+			header{
+			background:#0097a7;
+			color:white;
+			padding:30px;
+			text-align:center;
+			}
+			h1{
+			margin:0;
+			}
+			.destinacije{
+			display:flex;
+			justify-content:center;
+			gap:30px;
+			margin-top:40px;
+			}
+			.kartica{
+			background:white;
+			width:250px;
+			border-radius:15px;
+			overflow:hidden;
+			box-shadow:0 0 10px gray;
+			}
+			.kartica img{
+			width:100%;
+			height:150px;
+			object-fit:cover;
+			}
+			.kartica h2{
+			text-align:center;
+			}
+			.kartica button{
+			display:block;
+			margin:20px auto;
+			padding:10px 25px;
+			background:#0097a7;
+			color:white;
+			border:none;
+			border-radius:10px;
+			cursor:pointer;
+			}
+			.kartica p{
+			padding:10px;
+			}
+			.rezervacija{
+			margin-top:50px;
+			text-align:center;
+			}
+			input,select{
+			padding:10px;
+			margin:10px;
+			border-radius:8px;
+			border:1px solid gray;
+			}
+			#poruka{
+			font-size:22px;
+			margin-top:20px;
+			}
+			button{
+			border: none;
+			background-color: #0097a7;
+			color: #ffffff;
+			cursor: pointer;
+			padding: 10px;
+			border-radius:10px;
+			transition:transform 0.1s;
+			box-shadow:0 0 1px gray;
+			}
+			button:hover{
+			transform: scale(1.05);
+			}
+			#saleAdd{
+			color: red;
+			padding:1px 10px;
+			text-align:right;
+			}
+		</style>
+	</head>
+	<body>
+	    <div id="saleAdd">10% popusta na sve rezervacije do 28. juna!</div>
+		<header>
+			<h1>Sun Travel</h1>
+			<p>Vaše savršeno letovanje počinje ovde</p>
+		</header>
+		<div class="destinacije">
+			<div class="kartica">
+				<img src="https://picsum.photos/300/200?random=1">
+				<h2>Grčka</h2>
+				<p>Prelepe plaže i kristalno more</p>
+			</div>
+			<div class="kartica">
+				<img src="https://picsum.photos/300/200?random=2">
+				<h2>Maldivi</h2>
+				<p>Tropski raj i odmor iz snova</p>
+			</div>
+			<div class="kartica">
+				<img src="https://picsum.photos/300/200?random=3">
+				<h2>Španija</h2>
+				<p>More, sunce i zabava</p>
+			</div>
+			<div class="kartica">
+				<img src="https://picsum.photos/300/200?random=4">
+				<h2>Egipat</h2>
+				<p>Piramide, Faraoni, Nil</p>
+			</div>
+		</div>
+		<div class="rezervacija">
+			<h2>Rezerviši putovanje</h2>
+			<select id="destinacija">
+				<option value="500">Grčka - 500€</option>
+				<option value="1200">Maldivi - 1200€</option>
+				<option value="700">Španija - 700€</option>
+			</select>
+			<input type="number" id="osobe" placeholder="Broj osoba">
+			<button onclick="rezervisi()">
+			Rezerviši
+			</button>
+			<div id="poruka"></div>
+		</div>
+		<script>
+			function rezervisi(){
+			let cena = Number(document.getElementById("destinacija").value);
+			let osobe = Number(document.getElementById("osobe").value);
+			if(osobe == 0){
+			document.getElementById("poruka").innerText = "Unesi broj osoba!";
+			return;
+			}
+			let ukupno = cena * osobe;
+			document.getElementById("poruka").innerText = "Rezervacija uspešna! Ukupna cena: " + ukupno + "€";
+			}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+ZADATAK (ljubimac verzija)
+1. Kreiraj HTML fajl i dodaj <style> unutar <head> (interni CSS).
+2. Postavi naziv taba na: "Ljubimac iz snova"
+3. Dodaj favicon.
+4. Postavi pozadinsku sliku (neki ljubimac):
+   background-size: cover
+   bez ponavljanja
+5. Dodaj naslov:
+- "Ljubimac iz snova" (centriran)
+6. Kreiraj formu (kontejner u centru):
+   širina ~300px
+   tamna pozadina
+   centrirana na stranici
+7. U formi dodaj:
+   input (text) → "Koja zivotinja?"
+   input (number) → "Koje starosti?"
+   radio dugmad → "Pol" (mužjak / ženka)
+8. Dodaj dugme:
+- "Dodaj ljubimca"
+9. Kada se klikne dugme:
+- povećava se broj ljubimaca (npr. 1, 2, 3…)
+- taj broj se prikazuje ispod forme
+10. Dodaj <script> i napiši JavaScript za brojač.

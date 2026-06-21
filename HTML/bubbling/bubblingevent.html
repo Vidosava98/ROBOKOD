@@ -1,0 +1,19 @@
+<html>
+	<head>
+	</head>
+	<body>
+	<div id="parent">
+    <button id="child">Klikni me</button>
+	</div>
+
+	<script>
+	document.getElementById("parent").addEventListener("click", function() {
+		console.log("Parent clicked");
+	});
+
+	document.getElementById("child").addEventListener("click", function() {
+		console.log("Child clicked");
+	});
+	</script>
+	</body>
+</html>
